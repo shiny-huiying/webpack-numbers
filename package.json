@@ -1,5 +1,5 @@
 {
-  "name": "webpack-numbers",
+  "name": "shiny-webpack-numbers",
   "version": "1.0.0",
   "main": "dist/webpack-numbers.js",
   "scripts": {
