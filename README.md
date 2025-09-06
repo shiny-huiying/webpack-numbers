@@ -99,4 +99,25 @@ module.exports = {
 ### v0.0.5
 
 换一种引入方式：`import reduce from 'lodash/reduce';`，上面的 `externals` 失效了，构建产物体积大小为 20KB。
+构建后没有这个文件了： webpack-numbers.js.LICENSE.txt 
+
+
+
+### v0.0.6
+
+修改 `externals` 继续将按需引入的 lodash 也外部化：
+
+```javascript
+module.exports = {
+  // 外部化 'lodash/reduce'，以减少打包体积
+  externals: [
+    // 方法一：直接指定字符串
+    // 'lodash/reduce'
+    // 方法二：或者使用正则表达式
+    /^lodash\/.+$/
+  ]
+}
+```
+
+构建产物的体积大小只有 1KB。
 

@@ -17,12 +17,20 @@ module.exports = {
   },
 
   // 外部化 Lodash
-  externals: {
-    lodash: {
-      commonjs: 'lodash',
-      commonjs2: 'lodash',
-      amd: 'lodash',
-      root: '_' // 全局变量
-    }
-  }
+  // externals: {
+  //   lodash: {
+  //     commonjs: 'lodash',
+  //     commonjs2: 'lodash',
+  //     amd: 'lodash',
+  //     root: '_' // 全局变量
+  //   }
+  // }
+
+  // 外部化 'lodash/reduce'，以减少打包体积
+  externals: [
+    // 方法一：直接指定字符串
+    // 'lodash/reduce'
+    // 方法二：或者使用正则表达式
+    /^lodash\/.+$/
+  ]
 };
