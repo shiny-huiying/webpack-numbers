@@ -12,11 +12,35 @@
 
 ### v0.0.1
 
+```javascript
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'webpack-numbers.js',
+  },
+};
+```
+
 构建产物
 构建出来的js文件没有 numToWord() 和 wordToNum()，也没有从 ref.json 引入的变量，难道是被“树摇”掉了？
 
-<img src="assets/image-20250906213632232.png" alt="image-20250906213632232" style="zoom:50%;" />
+<img src="assets/image-20250906213632232.png" alt="image-20250906213632232" style="width:50%;" /><img src="assets/image-20250906215229937.png" alt="image-20250906215229937" style="width:50%;" />
 
+### v0.0.2
 
+```javascript
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'webpack-numbers.js',
+    // 将入口点公开为 webpackNumbers ，以便用户可以通过脚本标签使用它
+    library: "webpackNumbers", // <-----新增了这一行
+  },
+};
+```
 
+构建产物
 
+<img src="assets/image-20250906215141659.png" alt="image-20250906215141659" style="width:70%;" />
