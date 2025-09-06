@@ -96,3 +96,7 @@ module.exports = {
 
 构建产物的体积大小只有 1KB。
 
+### v0.0.5
+
+换一种引入方式：`import reduce from 'lodash/reduce';`，上面的 `externals` 失效了，构建产物体积大小为 20KB。
+
