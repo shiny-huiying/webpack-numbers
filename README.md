@@ -76,3 +76,23 @@ module.exports = {
 
 <img src="assets/image-20250906220011799.png" alt="image-20250906220011799" style="zoom:50%;" />
 
+### v0.0.4
+
+使用 `externals` 将 lodash 外部化，减小构建产物体积：
+
+```javascript
+module.exports = {
+  // 外部化 Lodash
+  externals: {
+    lodash: {
+      commonjs: 'lodash',
+      commonjs2: 'lodash',
+      amd: 'lodash',
+      root: '_' // 全局变量
+    }
+  }
+}
+```
+
+构建产物的体积大小只有 1KB。
+

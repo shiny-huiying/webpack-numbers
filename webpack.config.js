@@ -15,4 +15,14 @@ module.exports = {
       type: 'umd',
     }
   },
+
+  // 外部化 Lodash
+  externals: {
+    lodash: {
+      commonjs: 'lodash',
+      commonjs2: 'lodash',
+      amd: 'lodash',
+      root: '_' // 全局变量
+    }
+  }
 };
