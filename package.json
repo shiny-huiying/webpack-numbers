@@ -1,6 +1,6 @@
 {
   "name": "shiny-webpack-numbers",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/webpack-numbers.js",
   "scripts": {
     "build": "webpack --mode production"
@@ -13,5 +13,9 @@
     "lodash": "^4.17.21",
     "webpack": "^5.101.3",
     "webpack-cli": "^6.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shiny-huiying/webpack-numbers"
   }
 }
