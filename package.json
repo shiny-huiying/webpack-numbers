@@ -1,14 +1,14 @@
 {
   "name": "webpack-numbers",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/webpack-numbers.js",
   "scripts": {
     "build": "webpack --mode production"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "这是一个简单的 Libraries demo",
   "devDependencies": {
     "lodash": "^4.17.21",
     "webpack": "^5.101.3",
